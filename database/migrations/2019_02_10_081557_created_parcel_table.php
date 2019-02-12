@@ -26,7 +26,6 @@ class CreatedParcelTable extends Migration
             $table->double('volume');
             $table->double('weight');
             $table->integer('ordinary');
-            $table->rememberToken();
             $table->timestamps();
         });
 
@@ -34,7 +33,6 @@ class CreatedParcelTable extends Migration
             $table->string('order_no')->unique();
             $table->string('parcel_id');
             $table->integer('status');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

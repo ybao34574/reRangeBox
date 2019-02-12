@@ -21,9 +21,8 @@ class CreatedPostTable extends Migration
             $table->decimal('default_weight_price');
             $table->decimal('extra_weight_price');
             $table->integer('volume_param');
-            $table->decimal('coupon');
-            $table->string('remark');
-            $table->rememberToken();
+            $table->decimal('coupon')->nullable();
+            $table->string('remark')->nullable();
             $table->timestamps();
         });
     }

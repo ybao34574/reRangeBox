@@ -19,11 +19,10 @@ class CreatedOrdersTable extends Migration
             $table->integer('custom_id');
             $table->integer('status');
             $table->integer('item_count');
-            $table->decimal('total_price');
-            $table->double('net_weight');
-            $table->double('gross_weight');
-            $table->string('delivery_address');
-            $table->rememberToken();
+            $table->decimal('total_price')->nullable();
+            $table->double('net_weight')->nullable();
+            $table->double('gross_weight')->nullable();
+            $table->string('delivery_address')->nullable();
             $table->timestamps();
         });
 
@@ -32,16 +31,10 @@ class CreatedOrdersTable extends Migration
             $table->string('order_no');
             $table->integer('item_no');
             $table->integer('item_count');
-            $table->decimal('item_price');
-            $table->decimal('total_price');
-            $table->double('item_length');
-            $table->double('item_width');
-            $table->double('item_height');
-            $table->double('item_volume');
-            $table->double('item_weight');
-            $table->string('ref_no');
-            $table->string('lot_no');
-            $table->rememberToken();
+            $table->decimal('item_price')->nullable();
+            $table->decimal('total_price')->nullable();
+            $table->string('ref_no')->nullable();
+            $table->string('lot_no')->nullable();
             $table->timestamps();
         });
 
@@ -51,7 +44,6 @@ class CreatedOrdersTable extends Migration
             $table->string('package_no');
             $table->string('package_size');
             $table->integer('parcel_count');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
